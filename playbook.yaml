@@ -4,9 +4,12 @@
 
   tasks:
 
-    - name: Install system updates for centos systems
+    - name: Actualizacion de SO
       yum:
         name: '*'
         state: latest
         update_cache: yes
        #cache_valid_time: 3600
+    
+    - name: Actualizacion de Cyberpanel
+      command: sh <(curl https://raw.githubusercontent.com/usmannasir/cyberpanel/stable/preUpgrade.sh || wget -O - https://raw.githubusercontent.com/usmannasir/cyberpanel/stable/preUpgrade.sh)
