@@ -12,4 +12,4 @@
        #cache_valid_time: 3600
     
     - name: Actualizacion de Cyberpanel
-      command: sh <(curl https://raw.githubusercontent.com/usmannasir/cyberpanel/stable/preUpgrade.sh || wget -O - https://raw.githubusercontent.com/usmannasir/cyberpanel/stable/preUpgrade.sh)
+      command: sh wget -O - https://raw.githubusercontent.com/usmannasir/cyberpanel/stable/preUpgrade.sh
